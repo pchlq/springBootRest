@@ -26,7 +26,6 @@ public class UserDAOImpl implements UserDAO {
     public void addUser(User user) {
         User newUser = entityManager.merge(user);
         entityManager.persist(newUser);
-        entityManager.flush();
     }
 
     @Override
